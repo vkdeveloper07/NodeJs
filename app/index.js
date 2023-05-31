@@ -24,6 +24,10 @@ const server = http.createServer(function(req, res){
     res.end('Hello World\n');
     console.log(`request received on : ${trimmedPath} with this ${method} method `);
     console.log('and with this queryString parameter ', queryStringObject);
+
+    //get the headers
+    const headers = req.headers;
+    console.log(headers);
 });
 
 server.listen(port,() => {
